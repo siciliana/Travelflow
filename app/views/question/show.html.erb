@@ -1,0 +1,24 @@
+<h1>Here is one question</h1>
+<h3><%= @question.question_text %></h3>
+Posted By: <%= User.find(@question.user_id).email %><br>
+Tags:<br>
+<% @question.tags.each do |tag| %>
+<%= tag.name %><br>
+<% end %>
+
+
+
+
+
+
+
+
+<!-- list the questions orig tags
+list all answers
+  answer user id w link
+  current votes
+  tags
+
+have text box for a new answer
+  submit button
+  2 tag spots -->
