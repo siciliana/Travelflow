@@ -1,4 +1,12 @@
 Travelflow::Application.routes.draw do
+  get "tag/index"
+
+  get "answer/index"
+
+  get "question/index"
+
+  get "user/index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
