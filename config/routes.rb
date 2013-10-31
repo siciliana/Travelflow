@@ -3,9 +3,10 @@ Travelflow::Application.routes.draw do
   root :to => 'question#index'
 
   get "tag/index"
-
+  
   resources :questions
   resources :answers
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
