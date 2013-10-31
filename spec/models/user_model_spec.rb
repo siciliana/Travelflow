@@ -6,16 +6,5 @@ describe User do
       user = User.new()
       user.save.should eq false
     end
-
   end
-
-  describe "#new" do
-    it "should render the new user page/form successfully" do
-      render 
-      response.status.should eq 200
-  end
-
-  end
-
-
 end
