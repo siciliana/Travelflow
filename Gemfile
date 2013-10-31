@@ -8,6 +8,7 @@ gem 'rails', '3.2.13'
 gem 'pg'
 gem 'rspec-rails', '~> 2.0'
 
+gem 'thin'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -23,22 +24,14 @@ end
 
 gem 'jquery-rails'
 
+group :test, :development do
+  gem "rspec-rails"
+  gem 'shoulda-matchers'
+  gem 'capybara', '2.1.0'
+  gem 'spork-rails'
+  gem 'guard-rspec'
+  gem 'guard-spork'
+end 
 
-group :test do
-  gem 'capybara'
-  gem 'database_cleaner'
-end
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
 
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
