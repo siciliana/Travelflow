@@ -5,9 +5,8 @@ Travelflow::Application.routes.draw do
 
   get "question/index"
 
-  get "user/index"
 
-  resources :user
+  resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
