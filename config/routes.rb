@@ -1,6 +1,6 @@
 Travelflow::Application.routes.draw do
 
-  root :to => 'question#index'
+  root :to => 'questions#index'
 
   get "tag/index"
   

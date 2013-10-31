@@ -17,6 +17,7 @@ development:
   encoding: unicode
   database: travelflow_development
   pool: 5
+  host: localhost
  # username: travelflow
  # password:
 
@@ -43,6 +44,7 @@ test:
   encoding: unicode
   database: travelflow_test
   pool: 5
+  host: localhost
  # username: travelflow
 # password:
 
