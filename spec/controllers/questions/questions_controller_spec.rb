@@ -13,6 +13,11 @@ describe QuestionsController do
       get :index
       expect(response.status).to eq (200)
     end
+
+    it "should render index successfully" do
+      get :index
+      response.status.should eq 200
+    end
   end
 
   describe "GET #show" do
@@ -32,5 +37,5 @@ describe QuestionsController do
       get :show, id: question
       expect(response.status).to eq (200)
     end
-  end
+  end 
 end
