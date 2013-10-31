@@ -7,4 +7,7 @@ Travelflow::Application.routes.draw do
   resources :questions
   resources :answers
   resources :users
+  
+  post '/login' => 'users#login'
+
 end
