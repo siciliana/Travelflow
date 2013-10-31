@@ -8,6 +8,7 @@ describe QuestionController do
   #   @answer = Answer.create(answer_text: "yes", question_id: 1)
   # end
 
+
   describe "GET index" do
     it "assigns @questions to all questions"do
       questions = Question.all
@@ -22,10 +23,17 @@ describe QuestionController do
     end
   end
 
-  # describe "GET #show" do
-  #   it "renders the show template" do
+  describe "GET #show" do
 
-  #   end
+      let (:question) {Question.create(question_text: "emily")}
+
+    it "receives a question" do
+      get :show, :id => question
+
+      expect(Question.find(Question.last.id)).to eq(question)
+    end
+
+
 
 
   #   # it "assigns @question to a specific question" do
@@ -39,7 +47,7 @@ describe QuestionController do
   #   #   expect(@question.answers).should eq([@answer])
 
   #   # end
-  # end
+  end
 
 
 end
