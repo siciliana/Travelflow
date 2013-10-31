@@ -6,6 +6,7 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+  <div id='page_body'>
 <header>
   <ul>
     <% if session[:user_id] %>
@@ -17,13 +18,12 @@
       <li><%= link_to('Ask Question') %></li>
     <% end %>
 
-
   </ul>
 </header>
 
+
 <body>
-
-<%= yield %>
-
+    <%= yield %>
 </body>
+  </div>
 </html>
