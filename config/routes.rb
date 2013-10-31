@@ -6,9 +6,21 @@ Travelflow::Application.routes.draw do
   get "question/index"
 
 
-  resources :users
+  # resources :users
+  get '/users' => 'users#index'
+  get '/users/new' => 'users#new', as: 'new_user'
+  post '/users' => 'users#create'
+  put '/users/:id' => 'users#update'
+  delete '/users/:id' => 'users#destroy'
+  get '/users/:id/edit' => 'users#edit', as: 'edit_user'
+  get '/users/:id' => 'users#show', as: 'user'
+
+
+
   post '/login' => 'users#login'
   get '/logout' => 'users#logout'
+  
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
