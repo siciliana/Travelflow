@@ -18,7 +18,6 @@ class UsersController < ApplicationController
 
   def login
     user = User.find_by_email(params[:user][:email])
-    puts params[:user][:password]
     if user && user.authenticate(params[:user][:password])
       session[:user_id] = user.id
       redirect_to root_path

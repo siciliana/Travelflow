@@ -33,7 +33,14 @@ describe UsersController do
     create_user(:password => nil)
     response.should render_template("new")
   end
-  
+
+  it "allows a user to login" do
+    create_user
+    post :login, :user => {:email => "email@email.com", :password => "password"}
+    # session[:user_id].should_not_be_nil
+    response.should be_redirect
+  end
+
   def create_user(options = {})
     post :create, :user => {:email => "email@email.com", :password =>"password"}.merge(options)
   end
