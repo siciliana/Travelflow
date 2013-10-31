@@ -1,3 +1,4 @@
+<div class="container">
 <h1>Here is one question</h1>
 <h3><%= @question.question_text %></h3>
 Posted By: <%= User.find(@question.user_id).email %><br>
@@ -6,11 +7,22 @@ Tags:<br>
 <%= tag.name %><br>
 <% end %>
 
+<br><br>
 
+<h3>Answers:</h3>
+<% @answers.each do |answer| %>
+<%= answer.answer_text %><br>
+Answered by: <%= User.find(answer.user_id).email %> <br><br>
+<% end %>
 
+<br><br>
 
+<%= form_tag("/answer", method: "post") do  %> <!--#FIXME edit the url -->
+Answer:<br><%= text_field_tag(:answer) %>
+<%= submit_tag("Answer This") %>
+<% end %>
 
-
+</div>
 
 
 <!-- list the questions orig tags

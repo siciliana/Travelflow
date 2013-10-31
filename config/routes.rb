@@ -9,6 +9,9 @@ Travelflow::Application.routes.draw do
 
   resources :question
 
+
+  resources :answer
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
