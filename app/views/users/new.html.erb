@@ -1,0 +1,18 @@
+<h1>Make an new TravelFlow account below, man.</h1>
+
+<%= form_for @user, url: {action: "create"}, html: {id: "new_user_form"} do |f|  %>
+  <%=f.text_field :name, placeholder: "Name" %>
+  <%=f.text_field :email, placeholder: "Email" %>
+  <%=f.text_field :password, placeholder: "Password" %>
+  <%=f.submit "Start your TravelFlow!"%>
+<%end%>
+
+
+<h1>Or, if you're already a member, sign in!</h1>
+
+<%= form_for @user, url: login_path, html: {id: "user_login_form"} do |f| %>
+  <%=f.text_field :email, placeholder: "Email" %>
+  <%=f.text_field :password, placeholder: "Password" %>
+  <%=f.submit "Login"%>
+<%end%>
+
