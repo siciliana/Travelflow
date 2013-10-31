@@ -6,7 +6,20 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+<header>
+  <ul>
+    <% if session[:user_id] %>
+      <li><%= link_to('Ask Question', new_question_path) %></li>
+      <li class='ajax_form'><%= link_to('logout') %></li>
+      <% else %>
+      <li class='ajax_form'><%= link_to('login') %></li> <!-- #FIXME AJAX SIGNIN FORM -->
+      <li class='ajax_form'><%= link_to('signup') %></li>
+      <li><%= link_to('Ask Question') %></li>
+    <% end %>
 
+
+  </ul>
+</header>
 
 <body>
 

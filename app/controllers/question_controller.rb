@@ -3,6 +3,10 @@ class QuestionController < ApplicationController
     @questions = Question.all
   end
 
+  def new
+
+  end
+
   def show
     session[:user_id] = 1  #FIXME delete these
     params[:question_id] = 1
@@ -12,3 +16,4 @@ class QuestionController < ApplicationController
     @answers = @question.answers
   end
 end
+
