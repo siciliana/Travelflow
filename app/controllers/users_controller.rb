@@ -8,6 +8,6 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(params[:user])
-    redirect_to '/' #FIXME - this should redirect to the profile page
+    redirect_to '/'
   end
 end
