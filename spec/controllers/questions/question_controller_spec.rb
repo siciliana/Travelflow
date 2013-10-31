@@ -3,11 +3,6 @@ require 'spec_helper'
 
 
 describe QuestionController do
-  # before do
-  #   @question = Question.create(question_text: "can you dance?")
-  #   @answer = Answer.create(answer_text: "yes", question_id: 1)
-  # end
-
 
   describe "GET index" do
     it "assigns @questions to all questions"do
@@ -26,27 +21,30 @@ describe QuestionController do
   describe "GET #show" do
 
       let (:question) {Question.create(question_text: "emily")}
+      let(:answer) {Answer.create(answer_text: "that's right", question_id: question.id)}
+
+      # let(:answer2) {Answer.create(answer_text: "that's right", question_id: question.id)}
+
+    it "requires the :id parameter" do
+      expect{get :show}.to raise_error(ActionController::RoutingError)
+    end
 
     it "receives a question" do
       get :show, :id => question
-
       expect(Question.find(Question.last.id)).to eq(question)
     end
 
+    it "renders the show templete" do
+      get :show, id: question
+      response.should render_template :show
+    end
 
+    # it "generates all answers for selected question" do
+    #   get :show, :id => question
+    #   get :show,
+    #   (question.answers).to match([])
+    # end
 
-
-  #   # it "assigns @question to a specific question" do
-  #   #   question_id = 1
-  #   #   get :show
-  #   #   expect(@question).to eq(Question.find(question_id))
-  #   # end
-
-  #   # it "it assigns all answers to given question" do
-  #   #   # get :show
-  #   #   expect(@question.answers).should eq([@answer])
-
-  #   # end
   end
 
 
