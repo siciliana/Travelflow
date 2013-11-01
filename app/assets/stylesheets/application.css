@@ -51,3 +51,11 @@ header li a{
 img {
   border-radius: 30%;
 }
+
+.poster_image {
+  width: 40px;
+}
+
+.answerer_image {
+  width:20px;
+}
