@@ -47,3 +47,7 @@ header li a{
   right: 0;
   z-index: -1;
 }
+
+img {
+  border-radius: 30%;
+}
