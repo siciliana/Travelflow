@@ -11,6 +11,8 @@ class QuestionsController < ApplicationController
   def show
     @question = Question.find(params[:id])
     @answer = Answer.new
+    @questioning_user = User.find(@question.user_id)
+    
   end
 
 	# def create

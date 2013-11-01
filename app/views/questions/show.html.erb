@@ -1,7 +1,9 @@
 
-<h1>Here is one question</h1>
-<h3><%= @question.question_text %></h3>
-  Posted By: <%= User.find(@question.user_id).email %><br>
+<h2><%= @question.question_text %></h2>
+  <%= image_tag @questioning_user.gravatar_url, { :class => "poster_image" }  %>
+  Posted By: 
+  <%= @questioning_user.email %><br>
+  
   Tags:<br>
   <% @question.tags.each do |tag| %>
     <%= tag.name %><br>
@@ -12,6 +14,7 @@
 <h3>Answers:</h3>
   <% @question.answers.each do |answer| %>
     <%= answer.answer_text %><br>
+    <%= image_tag (User.find(answer.user_id).gravatar_url), { :class => "answerer_image" } %>
     Answered by: <%= User.find(answer.user_id).email %> <br><br>
   <% end %>
 
