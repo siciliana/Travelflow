@@ -1,7 +1,32 @@
 class Answer < ActiveRecord::Base
   attr_accessible :answer_text, :question_id, :user_id
 
-  belongs_to :question
+  has_many :taggings
+  has_name :tags, through: :taggings
+
   belongs_to :user
   has_many :votes 
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

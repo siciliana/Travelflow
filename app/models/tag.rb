@@ -1,5 +1,34 @@
 class Tag < ActiveRecord::Base
   attr_accessible :name, :question_id
   
-  belongs_to :question 
+  has_many  :taggings 
+  has_many :answers, through: :taggings
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
