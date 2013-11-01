@@ -16,11 +16,13 @@ class AnswersController < ApplicationController
     @question = Question.find(params[:question_id])
     @answer = current_user.answers.new(params[:answer])
     @answer.question = @question
-
+    p "---------------------------------------------------------"
+    p params[:tag]
     if @answer.save
-      # params[:tag].each do |k, v|
-        # @answer.tags.create(name: v)
-      # end
+      params[:tag].each do |k, v|
+        @answer.tags.create(name: v)
+
+      end
       redirect_to question_path(@question)
     else
       render 'questions/show'
