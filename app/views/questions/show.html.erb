@@ -2,11 +2,8 @@
 <h1>Here is one question</h1>
 <h3><%= @question.question_text %></h3>
   Posted By: <%= User.find(@question.user_id).email %><br>
-  Tags:<br>
-  <% @question.tags.each do |tag| %>
-  <%= link_to(tag.name, tag_path(tag)) %>
+
     <br>
-  <% end %>
 
 <br><br>
 
@@ -15,12 +12,21 @@
     <%= answer.answer_text %><br>
     Answered by: <%= User.find(answer.user_id).email %> <br><br>
   <% end %>
-
+  Tags:<br>
+  <% @answer.tags.each do |tag| %>
+  <%= link_to(tag.name, tag_path(tag)) %>
+  <% end %>
 <br><br>
 
 <h3>Your Answer:</h3>
   <%= form_for @answer do |f|%>
     <%= f.text_field :answer_text %>
+
+    <%= render "tag" %>
+        <button class="add_tag" type="button">
+          <%=link_to 'Add Tag', tag_answer_path, remote: true %>
+        </button><br>
+
     <%= hidden_field_tag :question_id, @question.id %>
     <%= f.submit "Answer This" %>
   <% end %>

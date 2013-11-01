@@ -11,6 +11,6 @@ Travelflow::Application.routes.draw do
 
   post '/login' => 'users#login'
   get '/logout' => 'users#logout'
-  get 'questions/tag' => 'questions#tag', as: 'tag_question'
+  get 'answer/tag' => 'answers#tag', as: 'tag_answer'
 
 end
