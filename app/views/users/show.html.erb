@@ -5,10 +5,10 @@
  <%= @user.email %> <br>
 
  <p><strong>Questions: </strong>
-<%= @user.questions.each do |question| %> <br>
-    <%= question.question_text %><br>
-  
-<% end %>
+  <% @user.questions.each do |question| %> <br>
+      <%= question.question_text %><br>
+
+  <% end %>
   <br>
   <p> Member Since: <%= @user.created_at %></p>
 </div>
