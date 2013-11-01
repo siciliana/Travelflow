@@ -1,20 +1,21 @@
-<h1>TravelFlow Travelers</h1>
-
 <div class="all_user_display">
-  <% @users.each do |user| %>
-    <p><%= image_tag user.gravatar_url  %>
-    <%= user.name %><br>
-    
-    <strong>Questions:</strong><br>
-    <% if user.questions == nil %>
-      <p>(<%= user.name %> has not asked any questions yet!)
-    <% else %>
-      <% user.questions.each do |question| %>
-        
-        &nbsp&nbsp<%= question.question_text %><br>
+
+  <h1><center><strong>TravelFlowers</strong></center></h1>
+
+    <% @users.each do |user| %>
+      <p><%= link_to image_tag(user.gravatar_url), users_path %> 
+      <%= user.name %><br>
+      
+      <strong>Questions:</strong><br>
+      <% if user.questions == nil %>
+        <p>(<%= user.name %> has not asked any questions yet!)
+      <% else %>
+        <% user.questions.each do |question| %>
+          
+          &nbsp&nbsp<%= question.question_text %><br>
+      <% end %>
+          <% end %>
+          <br>
     <% end %>
-        <% end %>
-        <br>
-  <% end %>
 
 </div>

@@ -52,6 +52,7 @@ header li a:hover {
 
 body {
   margin: 0;
+  padding-top: 100px;
 }
 
 #page_body {
@@ -89,9 +90,6 @@ img {
   width:20px;
 }
 
-.questions_container {
-  padding-top: 100px;
-}
 .questions_container a:link, a:active {
   text-decoration: none;
   color: teal;
@@ -101,16 +99,13 @@ img {
   list-style-type: none;
 }
 
-
-.question_new {
-  margin-top: 100px;
-}
-
-.question_show {
-  margin-top: 100px;
-}
-
 .signin_login {
   padding-top: 100px;
+  color: teal;
+}
+
+
+
+.all_user_display h1 {
   color: teal;
 }
