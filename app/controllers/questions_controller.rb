@@ -15,17 +15,7 @@ class QuestionsController < ApplicationController
     
   end
 
-	# def create
- #    @question = Question.new(params[:question_text])
- #    if @question.save
- #      redirect_to :create
- #    else
- #      render :new
- #    end 
-	# end
-
   def create
-   p  params
    @question = Question.new(question_text: params[:question][:question_text], user_id: current_user.id)
    if @question
      @question.save

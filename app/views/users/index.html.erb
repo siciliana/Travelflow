@@ -7,15 +7,14 @@
       <%= user.name %><br>
       
       <strong>Questions:</strong><br>
-      <% if user.questions == nil %>
-        <p>(<%= user.name %> has not asked any questions yet!)
-      <% else %>
-        <% user.questions.each do |question| %>
-          
+        <% if user.questions == nil %>
+         <p>(<%= user.name %> has not asked any questions yet!)
+        <% else %>
+          <% user.questions.each do |question| %> 
           &nbsp&nbsp<%= question.question_text %><br>
-      <% end %>
+        <% end %>
           <% end %>
-          <br>
+        <br>
     <% end %>
 
 </div>
