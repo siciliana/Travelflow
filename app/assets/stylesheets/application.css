@@ -1,3 +1,8 @@
+html {
+  font-family: 'Chelsea Market', cursive;
+  font-family: 'Comfortaa', cursive;
+}
+
 header {
   background-color: teal;
   line-height: 40px;
@@ -7,7 +12,12 @@ header {
   width: 100%;
 }
 
-header li{
+.home {
+  font-size:35px;
+  text-decoration: strong;
+}
+
+header li {
   list-style: none;
   display: inline;
 
@@ -18,15 +28,19 @@ header ul {
   margin-top: 10px;
 }
 
-header li a{
+header li a {
   text-decoration: none;
   color:white;
-  font-size: 24px;
+  font-size: 20px;
   padding: 10px;
 
 }
 
-.ajax_form{
+header li a:hover {
+  color: limegreen;
+} 
+
+.ajax_form {
   padding-right: 20px;
   float: right;
 }
@@ -40,14 +54,14 @@ body {
   margin: 0;
 }
 
-#page_body{
+#page_body {
   width: 100%;
   height: 100%;
   display: block;
   position: relative;
 }
 
-#page_body:after{
+#page_body:after {
   content: "";
   background: url(world.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -75,8 +89,12 @@ img {
   width:20px;
 }
 
-.questions_container a:link {
+.questions_container {
+  padding-top: 100px;
+}
+.questions_container a:link, a:active {
   text-decoration: none;
+  color: teal;
 }
 
 .questions_container ul {
@@ -84,3 +102,15 @@ img {
 }
 
 
+.question_new {
+  margin-top: 100px;
+}
+
+.question_show {
+  margin-top: 100px;
+}
+
+.signin_login {
+  padding-top: 100px;
+  color: teal;
+}
