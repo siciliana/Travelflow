@@ -25,13 +25,13 @@
 
       <% else %>
 
-        <li class='ajax_form_login'>
-          <%= link_to('login', new_user_path) %>
-        </li> <!-- #FIXME AJAX SIGNIN FORM -->
-
         <li class='ajax_form'>
           <%= link_to('signup', new_user_path) %>
         </li>
+
+        <li class='ajax_form_login'>
+          <%= link_to('login', new_user_path) %>
+        </li> <!-- #FIXME AJAX SIGNIN FORM -->
 
         <li>
           <%= link_to('Ask Question', new_user_path) %>

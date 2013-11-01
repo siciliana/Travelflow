@@ -20,6 +20,11 @@ header li a{
   float: right;
 }
 
+.ajax_form_login{
+  padding-right: 20px;
+  float: right;
+}
+
 .container {
   margin: auto;
   width: 85%;
