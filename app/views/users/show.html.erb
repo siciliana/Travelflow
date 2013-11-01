@@ -5,9 +5,13 @@
  <%= @user.email %> <br>
 
  <p><strong>Questions: </strong>
- <%= @user.questions.each do |question| %> <br>
-  <%= question.question_text %><br>
+<%= @user.questions.each do |question| %> <br>
+  <% if @user.questions == nil %>
+    <p>User has not posted any questions yet!</p>
+  <% else%>
+    <%= question.question_text %><br>
   <% end %>
-
- Member Since: <%= @user.created_at %>
+<% end %>
+  <br>
+  <p> Member Since: <%= @user.created_at %>
 </div>

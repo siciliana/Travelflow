@@ -3,7 +3,7 @@
   <h1><center><strong>TravelFlowers</strong></center></h1>
 
     <% @users.each do |user| %>
-      <p><%= link_to image_tag(user.gravatar_url), users_path %> 
+      <p><%= link_to image_tag(user.gravatar_url), user_path(user) %> 
       <%= user.name %><br>
       
       <strong>Questions:</strong><br>
