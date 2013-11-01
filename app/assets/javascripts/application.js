@@ -13,3 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+$(document).ready(function(){
+  console.log("are we even on the freaking page?")
+
+ $("#user_login_form").hide(); 
+  $('.ajax_form_login').click(function() {
+   event.preventDefault();
+   $("#user_login_form").show();
+
+  });
+ 
+});
