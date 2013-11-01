@@ -1,12 +1,4 @@
-<%=button_to "#login"%>
-<div>
-  <%= form_for @user, url: {action: "create"}, html: {id: "new_user_form"} do |f|  %>
-    <%=f.text_field :name, placeholder: "Name" %>
-    <%=f.text_field :email, placeholder: "Email" %>
-    <%=f.text_field :password, placeholder: "Password" %>
-    <%=f.submit "Start your TravelFlow!"%>
-  <%end%>
-</div>
+
 <h1>Welcome to TravelFlow</h1>
 <p>Find me in app/views/question/index.html.erb</p>
 

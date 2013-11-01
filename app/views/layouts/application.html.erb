@@ -14,11 +14,16 @@
       <li><%= link_to('Ask Question', new_question_path) %></li>
       <li class='ajax_form'><%= link_to('logout', logout_path) %></li>
       <% else %>
-      <li class='ajax_form'><%= link_to('login', new_user_path) %></li> <!-- #FIXME AJAX SIGNIN FORM -->
+      <li class='ajax_form_login'><%= link_to('login', new_user_path) %></li> <!-- #FIXME AJAX SIGNIN FORM -->
       <li class='ajax_form'><%= link_to('signup', new_user_path) %></li>
       <li><%= link_to('Ask Question', new_user_path) %></li>
     <% end %>
   </ul>
+<%= form_for @user, url: login_path, html: {id: "user_login_form"} do |f| %>
+  <%=f.text_field :email, placeholder: "Email" %>
+  <%=f.text_field :password, placeholder: "Password" %>
+  <%=f.submit "Login"%>
+<%end%>
 </header>
 
 
