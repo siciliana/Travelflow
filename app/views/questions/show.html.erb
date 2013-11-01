@@ -20,13 +20,21 @@
 
 <h3>Your Answer:</h3>
   <%= form_for @answer do |f|%>
+  <ol class="answer_tag">
+    <li>
+    <%= f.label :answer_text %>
     <%= f.text_field :answer_text %>
+    </li>
+    <li>
 
+    <%= form.label :tag, 'Tag' %>
+    <%= form.text_field :tag %>
     <%= render "tag" %>
         <button class="add_tag" type="button">
           <%=link_to 'Add Tag', tag_answer_path, remote: true %>
         </button><br>
-
+    </li>
     <%= hidden_field_tag :question_id, @question.id %>
     <%= f.submit "Answer This" %>
   <% end %>
+  </ol>
