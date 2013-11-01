@@ -10,11 +10,11 @@
 <h3>Answers:</h3>
   <% @question.answers.each do |answer| %>
     <%= answer.answer_text %><br>
-    Answered by: <%= User.find(answer.user_id).email %> <br><br>
-  <% end %>
   Tags:<br>
-  <% @answer.tags.each do |tag| %>
-  <%= link_to(tag.name, tag_path(tag)) %>
+  <% answer.tags.each do |tag| %>
+  <%= link_to(tag.name, tag_path(tag)) %><br>
+  <% end %>
+    Answered by: <%= User.find(answer.user_id).email %> <br><br>
   <% end %>
 <br><br>
 

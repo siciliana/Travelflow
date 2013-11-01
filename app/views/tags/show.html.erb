@@ -1,3 +1,11 @@
 <h1><%= @tag.name %></h1>
 
-<p><%= Answer.find(@tag.answer_id).answer_text %></p>
+<!-- Answer.where(@tag.name) -->
+
+<p><%= link_to(Answer.find(@tag.answer_id).answer_text, question_path()) %></p>
+
+
+
+<%= Question.find(Answer.find(@tag.answer_id).question_id) %>
+
+

@@ -15,6 +15,7 @@ gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'gravtastic'
+gem 'strip_attributes'
 
 group :test, :development do
   gem "rspec-rails"
@@ -23,7 +24,7 @@ group :test, :development do
   gem 'spork-rails'
   gem 'guard-rspec'
   gem 'guard-spork'
-end 
+end
 
 
 
