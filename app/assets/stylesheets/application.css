@@ -38,7 +38,7 @@ header li a {
 
 header li a:hover {
   color: limegreen;
-} 
+}
 
 .ajax_form {
   padding-right: 20px;
@@ -90,6 +90,10 @@ img {
   width:20px;
 }
 
+.questions_container {
+  padding-top: 100px;
+}
+
 .questions_container a:link, a:active {
   text-decoration: none;
   color: teal;
@@ -104,8 +108,15 @@ img {
   color: teal;
 }
 
+.question_new {
+  margin-top: 100px;
+}
 
+.question_show {
+  margin-top: 100px;
+}
 
-.all_user_display h1 {
+.signin_login {
+  padding-top: 100px;
   color: teal;
 }
