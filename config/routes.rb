@@ -6,8 +6,9 @@ Travelflow::Application.routes.draw do
   
   resources :questions
   resources :answers
+  resources :sessions
   resources :users
-  
+  post '/signup' => 'users#create'
   post '/login' => 'users#login'
   get '/logout' => 'users#logout'
 

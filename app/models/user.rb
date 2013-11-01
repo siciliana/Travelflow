@@ -7,8 +7,9 @@ class User < ActiveRecord::Base
   has_many :questions
   has_many :answers
 
-  validates :email, presence: true
-  validates :password, presence: true
+  validates :name, presence: true
+  validates :email, format: { with: /\w+@\w+\.\w{2,3}/ }
+  validates :email, uniqueness: true
 
   has_secure_password
 
