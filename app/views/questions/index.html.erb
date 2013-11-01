@@ -1,12 +1,13 @@
+<div class="questions_container">
 
-<h1>Welcome to TravelFlow</h1>
-<p>Find me in app/views/question/index.html.erb</p>
-<h4><%= flash[:success] %></h4>
-<%@questions.each do |question|%>
-<ul>
-  <li><%=link_to "#{question.question_text}", question_path(question)%>
-  </li>
-  </ul>
-  <%end%>
+  <h1>Welcome to TravelFlow</h1>
 
+  <h4><%= flash[:success] %></h4>
+    <%@questions.each do |question|%>
+    <ul>
+      <li><h3> >> <%=link_to "#{question.question_text}", question_path(question)%></h3>
+          </li>
+    </ul>
+    <%end%>
+</div>
 
