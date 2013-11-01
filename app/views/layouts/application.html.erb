@@ -10,6 +10,7 @@
 <header>
   <ul>
       <li><%= link_to('TravelFlow Home', root_path)%>
+      <li><%= link_to('Travelers', users_path) %></li>
     <% if session[:user_id] %>
       <li><%= link_to('Ask Question', new_question_path) %></li>
       <li class='ajax_form'><%= link_to('logout', logout_path) %></li>
@@ -17,6 +18,7 @@
       <li class='ajax_form'><%= link_to('login', new_user_path) %></li> <!-- #FIXME AJAX SIGNIN FORM -->
       <li class='ajax_form'><%= link_to('signup', new_user_path) %></li>
       <li><%= link_to('Ask Question', new_user_path) %></li>
+
     <% end %>
 
   </ul>
