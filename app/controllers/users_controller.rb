@@ -10,18 +10,21 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       session[:user_id] = @user.id
+      flash[:success] = "You signed up successfully"
       redirect_to root_path
     else
-      render "new"
+      render 'new'
     end
   end
 
   def login
-    user = User.find_by_email(params[:user][:email])
-    if user && user.authenticate(params[:user][:password])
-      session[:user_id] = user.id
+    @user = User.find_by_email(params[:user][:email])
+    if @user && @user.authenticate(params[:user][:password])
+      flash[:success] = "Welcome Back"
+      session[:user_id] = @user.id
       redirect_to root_path
     else
+      flash[:error] = "Either Email and/or Password incorrect"
       redirect_to new_user_path
     end
   end
