@@ -1,12 +1,17 @@
 
 <h1>Welcome to TravelFlow</h1>
+
 <p>Find me in app/views/question/index.html.erb</p>
+
 <h4><%= flash[:success] %></h4>
+
 <%@questions.each do |question|%>
-<ul>
-  <li><%=link_to "#{question.question_text}", question_path(question)%>
-  </li>
+
+  <ul>
+    <li><%=link_to "#{question.question_text}", question_path(question)%>
+    </li>
   </ul>
-  <%end%>
+
+<%end%>
 
 
