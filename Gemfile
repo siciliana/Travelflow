@@ -23,7 +23,9 @@ group :test, :development do
   gem 'spork-rails'
   gem 'guard-rspec'
   gem 'guard-spork'
-end 
+  gem 'nyan-cat-formatter'
+  gem 'factory_girl_rails', '4.2.1'
+end
 
 
 

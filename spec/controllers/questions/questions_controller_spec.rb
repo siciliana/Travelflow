@@ -37,5 +37,5 @@ describe QuestionsController do
       get :show, id: question
       expect(response.status).to eq (200)
     end
-  end 
+  end
 end

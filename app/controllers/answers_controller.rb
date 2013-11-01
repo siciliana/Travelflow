@@ -2,6 +2,7 @@ class AnswersController < ApplicationController
 
   def index
     @answer = Answer.new
+    render 'index'
   end
 
   def create
