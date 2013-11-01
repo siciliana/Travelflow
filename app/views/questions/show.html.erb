@@ -22,7 +22,6 @@
 
 <h4 id="button_id">Post your Answer!</h4>
 
-<!-- <h3>Your Answer:</h3> -->
   <%= form_for @answer do |f|%>
     <%= f.text_field :answer_text %>
     <%= hidden_field_tag :question_id, @question.id %>
