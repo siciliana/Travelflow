@@ -3,8 +3,14 @@
   <div class="form">
     <%= form_for :question, url: { action: "create"} do |f| %>
       <%= f.text_area :question_text, :placeholder=> "Enter Question Here" %><br>
+
       <%= render "tag" %>
-        <button class="add_tag" type="button">Add Tag</button><br>
+
+
+
+        <button class="add_tag" type="button">
+          <%=link_to 'Add Tag', tag_question_path, remote: true %>
+        </button><br>
 
       <%= f.submit "Submit"%>
 

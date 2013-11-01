@@ -1,4 +1,6 @@
 
+
+
 $(document).ready(function(){
 
   $('.add_tag').on('click',function(event){
@@ -9,7 +11,9 @@ $(document).ready(function(){
 
     // var input = $("<input type= 'text' class ='tag'>")
 
-    $('.add_tag').after()
+    $('.add_tag').append("<%=j render partial: tag' %>")
+
+      // "<input class='tag_name' type='text' name='tag[name]'>")
 
   // var tag = $(this)
   //   console.log(this)

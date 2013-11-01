@@ -11,6 +11,13 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
     @answer = Answer.new
   end
+  def tag
+    @question = Question.find(params[:id])
+
+    respond_to do |format|
+      format.js
+    end
+  end
 
   def create
    p  params

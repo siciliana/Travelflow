@@ -4,7 +4,8 @@
   Posted By: <%= User.find(@question.user_id).email %><br>
   Tags:<br>
   <% @question.tags.each do |tag| %>
-    <%= tag.name %><br>
+  <%= link_to(tag.name, tag_path(tag)) %>
+    <br>
   <% end %>
 
 <br><br>
