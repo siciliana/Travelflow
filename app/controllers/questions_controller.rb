@@ -12,7 +12,7 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
     @answer = Answer.new
     @questioning_user = User.find(@question.user_id)
-    
+
   end
 
   def create
@@ -21,7 +21,7 @@ class QuestionsController < ApplicationController
      @question.save
      redirect_to question_path(@question)
    else
-     redirect_to 'questions#new' 
-   end 
+     redirect_to 'questions#new'
+   end
   end
 end
