@@ -26,6 +26,7 @@ header li {
 header ul {
   margin-top: 0;
   margin-top: 10px;
+  padding-left: 0;
 }
 
 header li a {
@@ -40,6 +41,14 @@ header li a:hover {
   color: limegreen;
 }
 
+header img {
+  width:50px;
+}
+
+a.home {
+  padding-left: 10px;
+}
+
 .ajax_form {
   padding-right: 20px;
   float: right;
@@ -52,7 +61,7 @@ header li a:hover {
 
 body {
   margin: 0;
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 #page_body {
@@ -91,7 +100,7 @@ img {
 }
 
 .questions_container {
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 .questions_container a:link, a:active {
@@ -120,3 +129,13 @@ img {
   padding-top: 100px;
   color: teal;
 }
+
+.all_user_display h1 {
+  padding-top: 50px;
+  color: teal;
+}
+
+div.profile_container {
+  padding-top: 80px;
+}
+
