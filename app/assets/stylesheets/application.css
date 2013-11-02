@@ -124,3 +124,12 @@ img {
 .flower {
   width: 40px;
 }
+
+ul li a{
+ text-decoration:none; 
+ list-style-type: none;
+}
+
+ul {
+  list-style-type: none;
+}

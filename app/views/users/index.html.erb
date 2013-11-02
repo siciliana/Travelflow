@@ -11,7 +11,9 @@
          <p>(<%= user.name %> has not asked any questions yet!)
         <% else %>
           <% user.questions.each do |question| %> 
-          &nbsp&nbsp<%= question.question_text %><br>
+          <ul>
+            <li><%=link_to "#{question.question_text}", question_path(question)%></li>
+          </ul>
         <% end %>
           <% end %>
         <br>
