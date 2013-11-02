@@ -10,8 +10,9 @@
 </head>
   <div id='page_body'>
 <header>
-  <%= image_tag '/flower.jpg'%>
+
     <ul>
+      <%= image_tag '/flower.jpg', { :class => "flower"}%>
       <li><%= link_to('TravelFlower', root_path, { :class => "home"})%>
       <li><%= link_to('Travelers', users_path) %></li>
     <% if session[:user_id] %>
