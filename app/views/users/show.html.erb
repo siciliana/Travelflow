@@ -10,6 +10,6 @@
 
   <% end %>
   <br>
-  <p> Member Since: <%= @user.created_at %></p>
+  <p> Member Since: <%= time_ago_in_words(@user.created_at) %> ago</p>
 </div>
 
