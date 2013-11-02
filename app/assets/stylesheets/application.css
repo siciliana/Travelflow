@@ -133,3 +133,14 @@ ul li a{
 ul {
   list-style-type: none;
 }
+
+#button_id{
+  border-style: solid;
+  border-size: 1px;
+  border-color: limegreen;
+  width: 100px;
+  font-size: 10px;
+  border-radius: 80%;
+  background-color: teal;
+  color: white;
+}

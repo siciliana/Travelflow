@@ -22,7 +22,7 @@
 
 <h4 id="button_id">Post your Answer!</h4>
 
-  <%= form_for @answer do |f|%>
+  <%= form_for @answer, url: answers_path, html: {id: "answer_form"} do |f|%>
     <%= f.text_field :answer_text %>
     <%= hidden_field_tag :question_id, @question.id %>
     <%= f.submit "Answer This" %>
