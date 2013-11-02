@@ -4,10 +4,7 @@
     Posted By:
     <%= @questioning_user.email %><br>
 
-    Tags:<br>
-    <% @question.tags.each do |tag| %>
-        <%= link_to(tag.name, tag_path(tag)) %><br>
-    <% end %>
+
 
   <br><br>
 
@@ -15,31 +12,18 @@
     <% @question.answers.each do |answer| %>
       <%= answer.answer_text %><br>
       <%= image_tag (User.find(answer.user_id).gravatar_url), { :class => "answerer_image" } %>
-      Answered by: <%= User.find(answer.user_id).email %> <br><br>
+      Answered by: <%= User.find(answer.user_id).email %> <br>
+
+      Tags:<br>
+      <% answer.tags.each do |tag| %>
+          <%= link_to (tag.name, tag_path(tag)) %><br>
+      <% end %>
     <% end %>
+
 
   <br><br>
 
+
 <h4 id="button_id">Post your Answer!</h4>
-  <%= form_for @answer do |f|%>
-    <ol class="formList">
-      <li>
-        <%= f.text_field :answer_text %>
-      </li>
-      <li>
-        <%= f.label :tag_name, "Add tags" %>
-        <%= f.text_field :tag_names %>
-      </li>
-      <li>
-        <%= f.label :content, "Content" %>
-        <%= f.text_area :content :rows => 10 %>
-      </li>
-      <li>
-        <%= hidden_field_tag :question_id, @question.id %>
-      </li>
-      <li>
-        <%= f.submit "Answer This" %>
-      </li>
-    </ol>
-  <% end %>
+   <%= render :partial => 'answer/form' %>
 </div>
