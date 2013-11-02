@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+
 <h2>Create a New Question:</h2>
+=======
+>>>>>>> master
 <div class="question_new">
 
   <%= form_for :question, url: { action: "create"} do |f| %>

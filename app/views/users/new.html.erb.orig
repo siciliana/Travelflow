@@ -1,0 +1,38 @@
+<div class="signin_login">
+
+<h1>Get TravelFlowin'!</h1>
+  <% if @user.errors.any? %>
+    <ul class="Signup_Errors">
+    <% for message_error in @user.errors.full_messages %>
+      <li> <%= message_error %></li>
+    <% end %>
+    </ul>
+  <% end %>
+<<<<<<< HEAD
+  <ol class="formList">
+    <li><%= form_for @user, url: signup_path, html: {id: "new_user_form"} do |f|  %>
+    </li>
+    <li>
+      <%=f.text_field :name, placeholder: "Name" %>
+    </li>
+    <li>
+      <%=f.text_field :email, placeholder: "Email" %>
+    </li>
+    <li>
+      <%=f.password_field :password, placeholder: "Password" %>
+    </li>
+    <li>
+      <%=f.submit "Start your TravelFlow!"%>
+     </ol>
+  </ol>
+<%end%>
+=======
+  
+  <%= form_for @user, url: signup_path, html: {id: "new_user_form"} do |f|  %>
+    <%=f.text_field :name, placeholder: "Name" %>
+    <%=f.text_field :email, placeholder: "Email" %>
+    <%=f.password_field :password, placeholder: "Password" %>
+    <%=f.submit "Start your TravelFlow!"%>
+  <%end%>
+>>>>>>> master
+</div>
