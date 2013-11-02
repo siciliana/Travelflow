@@ -8,11 +8,14 @@ class Answer < ActiveRecord::Base
   belongs_to :question
   belongs_to :user
   has_many :votes
+  # validates_presence_of :name, :content      ##### Do we need this?
 
 
   def tag_names
     @tag_names || tags.map(&:name).join(' ')
   end
+
+  private
 
   def assign_tags
     if @tag_names
