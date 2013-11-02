@@ -12,7 +12,6 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
     @answer = Answer.new
     @questioning_user = User.find(@question.user_id)
-
   end
 
   def create
